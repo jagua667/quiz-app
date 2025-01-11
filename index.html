@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadaten und Seiteneinstellungen -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+
+    <!-- Verlinkung zum externen CSS-Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Hauptcontainer für das Quiz -->
+    <div class="quiz-container">
+        
+        <!-- Anzeige für die Quizfrage -->
+        <h2 id="question">Frage wird geladen...</h2>
+        
+        <!-- Antwort-Buttons, jeder ruft bei Klick die Funktion selectAnswer auf -->
+        <div class="answers">
+            <button class="answer" onclick="selectAnswer(0)">Antwort 1</button>
+            <button class="answer" onclick="selectAnswer(1)">Antwort 2</button>
+            <button class="answer" onclick="selectAnswer(2)">Antwort 3</button>
+            <button class="answer" onclick="selectAnswer(3)">Antwort 4</button>
+        </div>
+        
+        <!-- Button, um zur nächsten Frage zu gelangen -->
+        <button id="next-btn" class="next-btn" onclick="nextQuestion()">Nächste Frage</button>
+    </div>
+    
+    <!-- Verlinkung zur externen JavaScript-Datei für die Quiz-Funktionalität -->
+    <script src="script.js"></script>
+</body>
+
+</html>

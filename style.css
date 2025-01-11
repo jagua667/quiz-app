@@ -1,0 +1,70 @@
+/* Grundlegende Stile für den gesamten Body */
+body {
+    font-family: Arial, sans-serif; /* Setzt die Schriftart für die gesamte Seite */
+
+    /* Aktiviert das Flexbox-Layout für den Body */
+    display: flex; /* Flexbox ermöglicht das einfache Zentrieren von Inhalten sowohl horizontal als auch vertikal */
+
+    /* Zentriert die Kinder-Elemente (in diesem Fall den .quiz-container) horizontal */
+    justify-content: center; /* Verteilt den verfügbaren Platz gleichmäßig links und rechts vom Inhalt, sodass dieser horizontal zentriert wird */
+
+    /* Zentriert die Kinder-Elemente vertikal */
+    align-items: center; /* Verteilt den verfügbaren Platz oberhalb und unterhalb des Inhalts gleichmäßig, sodass er vertikal zentriert im Viewport erscheint */
+
+    height: 100vh; /* Setzt die Höhe des Body-Bereichs auf die volle Höhe des Viewports (100% der Viewport-Höhe). Dadurch ist Flexbox in der Lage, den Inhalt exakt in der Mitte des Bildschirms zu platzieren */
+
+    margin: 0; /* Entfernt alle Standardabstände rund um den Body-Bereich */
+    background-color: #f4f4f9; /* Setzt einen hellgrauen Hintergrund für die gesamte Seite */
+}
+
+/* Hauptcontainer für das Quiz */
+.quiz-container {
+    width: 300px; /* Begrenzte Breite des Containers für die zentrale Darstellung */
+    text-align: center; /* Zentriert den Text innerhalb des Containers */
+    background: white; /* Weißer Hintergrund für den Container */
+    padding: 20px; /* Innenabstand, um den Inhalt vom Rand des Containers zu trennen */
+    border-radius: 8px; /* Abgerundete Ecken für ein weiches Design */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Leichter Schatteneffekt für mehr Tiefe */
+}
+
+/* Layout für den Antwort-Button-Container */
+.answers {
+    display: grid; /* Setzt ein Grid-Layout, um die Buttons gleichmäßig untereinander anzuordnen */
+    gap: 10px; /* Fügt Abstand zwischen den einzelnen Buttons im Grid hinzu */
+}
+
+/* Stil für jeden Antwort-Button */
+.answer {
+    padding: 10px; /* Innenabstand innerhalb des Buttons */
+    background-color: #ddd; /* Hellgrauer Hintergrund im Standardzustand */
+    border: none; /* Entfernt den Standardrahmen des Buttons */
+    border-radius: 4px; /* Abgerundete Ecken für ein modernes Aussehen */
+    cursor: pointer; /* Zeigt einen Mauszeiger in Form einer Hand beim Überfahren des Buttons */
+}
+
+/* Stil für eine richtige Antwort */
+.answer.correct {
+    background-color: #4caf50; /* Grüner Hintergrund für korrekte Antworten */
+    color: white; /* Weißer Text für besseren Kontrast auf dem grünen Hintergrund */
+}
+
+/* Stil für eine falsche Antwort */
+.answer.incorrect {
+    background-color: #f44336; /* Roter Hintergrund für falsche Antworten */
+    color: white; /* Weißer Text für besseren Kontrast auf dem roten Hintergrund */
+}
+
+/* Stil für den "Nächste Frage"-Button */
+.next-btn {
+    margin: 15px auto 0; /* Verwendet "0 auto", um den Button horizontal zu zentrieren:
+                            - "15px" fügt einen oberen Abstand hinzu.
+                            - "auto" links und rechts sorgt für automatischen Abstand, sodass der Button mittig ausgerichtet ist.
+                            - "0" entfernt den unteren Abstand. */
+    padding: 10px; /* Innenabstand innerhalb des Buttons */
+    background-color: #007bff; /* Blaue Hintergrundfarbe für den Button */
+    color: white; /* Weißer Text für besseren Kontrast auf dem blauen Hintergrund */
+    border: none; /* Entfernt den Standardrahmen des Buttons */
+    border-radius: 4px; /* Abgerundete Ecken für ein ansprechendes Design */
+    cursor: pointer; /* Zeigt einen Mauszeiger in Form einer Hand beim Überfahren des Buttons */
+    display: none; /* Blendet den Button standardmäßig aus; kann durch JavaScript sichtbar gemacht werden */
+}
